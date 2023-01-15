@@ -1,0 +1,16 @@
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\task29\bin\Debug\net6.0\task29.exe
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\task29\bin\Debug\net6.0\task29.deps.json
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\task29\bin\Debug\net6.0\task29.runtimeconfig.json
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\task29\bin\Debug\net6.0\task29.dll
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\task29\bin\Debug\net6.0\ref\task29.dll
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\task29\bin\Debug\net6.0\task29.pdb
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\task29\obj\Debug\net6.0\task29.GlobalUsings.g.cs
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\task29\obj\Debug\net6.0\task29.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\task29\obj\Debug\net6.0\task29.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\task29\obj\Debug\net6.0\task29.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\task29\obj\Debug\net6.0\task29.AssemblyInfo.cs
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\task29\obj\Debug\net6.0\task29.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\task29\obj\Debug\net6.0\task29.dll
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\task29\obj\Debug\net6.0\ref\task29.dll
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\task29\obj\Debug\net6.0\task29.pdb
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\task29\obj\Debug\net6.0\task29.genruntimeconfig.cache
