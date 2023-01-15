@@ -1,0 +1,16 @@
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\abstract\bin\Debug\net6.0\abstract.exe
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\abstract\bin\Debug\net6.0\abstract.deps.json
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\abstract\bin\Debug\net6.0\abstract.runtimeconfig.json
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\abstract\bin\Debug\net6.0\abstract.dll
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\abstract\bin\Debug\net6.0\ref\abstract.dll
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\abstract\bin\Debug\net6.0\abstract.pdb
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\abstract\obj\Debug\net6.0\abstract.GlobalUsings.g.cs
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\abstract\obj\Debug\net6.0\abstract.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\abstract\obj\Debug\net6.0\abstract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\abstract\obj\Debug\net6.0\abstract.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\abstract\obj\Debug\net6.0\abstract.AssemblyInfo.cs
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\abstract\obj\Debug\net6.0\abstract.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\abstract\obj\Debug\net6.0\abstract.dll
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\abstract\obj\Debug\net6.0\ref\abstract.dll
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\abstract\obj\Debug\net6.0\abstract.pdb
+C:\Users\admin\Desktop\Geek Brains\уроки\Учеба черновик\introduction-to-programming-languages-semiyar3\abstract\obj\Debug\net6.0\abstract.genruntimeconfig.cache
