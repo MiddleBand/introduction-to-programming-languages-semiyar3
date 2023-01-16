@@ -234,19 +234,194 @@
 // }
 
 
-/ Напишите программу, которая выводит массив из 8 элементов,
-// заполненный нулями и единицами в случайном порядке.
+// // Напишите программу, которая выводит массив из 8 элементов,
+// // заполненный нулями и единицами в случайном порядке.
 
-int[] array = GetBinaryArray(8);
-Console.WriteLine($" [ {String.Join(" // ", array)} ] ");
+// int[] array = GetBinaryArray(8);
+// Console.WriteLine($" [ {String.Join(" // ", array)} ] ");
 
 
-int[] GetBinaryArray(int size)
+// int[] GetBinaryArray(int size)
+// {
+// int[] result = new int[size];
+// for (int i = 0; i < size; i++)
+// {
+// result[i] = new Random().Next(2);
+// }
+// return result;
+// }
+
+
+
+
+int[] CreateRandomArray(int N, int start, int end)
 {
-int[] result = new int[size];
+int[] RandomArray = new int[N];
+for (int i = 0; i < N; i++)
+{
+RandomArray[i] = new Random().Next(start, end + 1);
+}
+return RandomArray;
+}
+
+
+
+
+
+int[] CreateArray()
+{
+Console.WriteLine("Введите количество элементов массива");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[size];
 for (int i = 0; i < size; i++)
 {
-result[i] = new Random().Next(2);
+Console.WriteLine($"Введите {i+1} элемент массива");
+array[i] = Convert.ToInt32(Console.ReadLine());
 }
-return result;
+return array;
+}
+
+
+
+
+int[] CreateArray()
+{
+Console.WriteLine("Введите количество элементов массива");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[size];
+for (int i = 0; i < size; i++)
+{
+Console.WriteLine($"Введите {i+1} элемент массива");
+array[i] = Convert.ToInt32(Console.ReadLine());
+}
+return array;
+}
+
+
+
+
+
+
+// // Создание и вывод массива
+
+int[] CreateRandomArray(int N, int start, int end)
+{
+int[] RandomArray = new int[N];
+for (int i = 0; i < N; i++)
+{
+RandomArray[i] = new Random().Next(start, end + 1);
+}
+return RandomArray;
+}
+
+
+int[] CreateArray()
+{
+Console.WriteLine("Введите количество элементов массива");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[size];
+for (int i = 0; i < size; i++)
+{
+Console.WriteLine($"Введите {i+1} элемент массива");
+array[i] = Convert.ToInt32(Console.ReadLine());
+}
+return array;
+}
+
+
+
+void ShowArray(int[] array)
+{
+for (int i = 0; i < array.Length; i++)
+{
+Console.Write(array[i] + " ");
+}
+Console.WriteLine();
+}
+
+
+
+Console.Clear();
+
+Console.WriteLine("Введите количество элементов в массиве");
+int num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите первое число случайно генерируемого диапазона");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите последнее число случайно генерируемого диапазона");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int[] myRandomArray = CreateRandomArray(num, min, max);
+ShowArray(myRandomArray);
+Console.WriteLine("-------");
+int[] myArray = CreateArray();
+ShowArray(myArray);
+
+
+
+
+int [] Array = CreateRandomArray(12, -9, 9);
+ShowArray(Array);
+
+int negative = 0;
+int positive = 0;
+
+for (int i=0; i < Array.Length; i++){
+if (Array[i] > 0) positive += Array[i];
+if (Array[i] < 0) negative += Array[i];
+}
+
+Console.WriteLine($"Сумма отрицательных {negative}");
+Console.WriteLine($"Сумма положительных {positive}");
+
+
+int[] InversArray(int[] array)
+{
+for (int i = 0; i < array.Length; i++)
+{
+array[i] *= -1;
+}
+return array;
+}
+
+
+
+
+//Задайте массив. Напишите программу, которая определяет,
+// присутствует ли заданное число в массиве.
+
+Clear();
+Write("Введите элементы массива через пробел: ");
+string elements = ReadLine();
+int[] baseArray = GetArrayFromString(elements);
+Write("Введите число: ");
+int n = int.Parse(ReadLine());
+if (FindElement(baseArray, n))
+{
+WriteLine("Да");
+}
+else
+{
+WriteLine("Нет");
+}
+
+
+int[] GetArrayFromString(string stringArray)
+{
+string[] nums = stringArray.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+int[] res = new int[nums.Length];
+
+for (int i = 0; i < nums.Length; i++)
+{
+res[i] = int.Parse(nums[i]);
+}
+return res;
+}
+
+bool FindElement(int[] array, int el)
+{
+foreach (var item in array)
+{
+if (el == item) return true;
+}
+return false;
 }
