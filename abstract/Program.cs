@@ -1,6 +1,7 @@
-﻿Задача 19
-Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
-  
+// ﻿Задача 19
+// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно ПАЛИНДРОМ.
+
+Console.Clear();
 Console.WriteLine("Введите пятизначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 int a = num/10000%10;
@@ -9,43 +10,38 @@ int c = num/1000%10;
 int d = num/10%10;
 int e = num/100%10;
 
-while((num>100000) && (num<100000)); 
-if(a==b && c==d) 
-  {
-  Console.WriteLine($"{a}{c}{e}{d}{b} - палиндромом ");
-  }  
-else 
-  {
-  Console.WriteLine($"{a}{c}{e}{d}{b} - не палиндромом ");
-  }
+while(num>100000); 
+if(a==b && c==d) Console.WriteLine($"{a}{c}{e}{d}{b} - палиндромом ");  
+else Console.WriteLine($"{a}{c}{e}{d}{b} - не палиндромом ");
 
-КАК ТУТ ЗАЦИКЛИТЬ ЧТОБЫ В ТЕРМИНАЛЕ НЕ ПРИХОДИЛОСЬ ПОСТОЯННО ЗАПУСКААТЬ ПРОГРАММУ, А ПРОСТО ВВОДИТЬ ПЯТИЗНАЧНОЕ ОДИН ЗА ДРУГИМ?
+// ﻿Задача 19 другое решение
 
-
-Console.WriteLine("Введите число: ");
-string number = Console.ReadLine();
-int len = number.Length;
-if (len == 5)
+Console.Clear();
+Console.WriteLine("Введите пятизначное число: ");
+string FillingString = Console.ReadLine();
+int length = FillingString.Length;
+if (length == 5)
 {
-if (number[0] == number[4] && number[1] == number[3])
+if (FillingString[0] == FillingString[4] && FillingString[1] == FillingString[3])
 {
-Console.WriteLine($"{number} - Палиндром");
+ Console.WriteLine($"{FillingString} - Палиндром");
+ }
+ else
+ {
+ Console.WriteLine($"{FillingString} - Не палиндром");
+ }
 }
 else
 {
-Console.WriteLine($"{number} - Не палиндром");
-}
-}
-else
-{
-Console.WriteLine($"Ошибка: {number} - Не является пятизначным");
+Console.WriteLine($"Ошибка: {FillingString} - Не является пятизначным");
 }
 
     
 
-Задача 21 
-Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+// ﻿Задача 21 
+// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
+Console.Clear();
 Console.WriteLine("Введите значение X: ");
 int x1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите значение Y: ");
@@ -63,11 +59,7 @@ double z = Math.Sqrt(Math.Pow(x1-x2, 2)+Math.Pow(y1-y2, 2)+Math.Pow(z1-z2, 2));
 
 Console.WriteLine($"d={z:f3}");
 
-ГДЕ МОЖНО НАЙТИ ИНФ О ТОМ КАКИЕ ФУНКЦИИ БЫВАЮТ В C#?
-
-
-
-
+// ﻿Задача 21 другое решение
 
 int x1 = ReadInt("Введите х для точки 1: ");
 int y1 = ReadInt("Введите y для точки 1: ");
@@ -89,60 +81,63 @@ return Convert.ToInt32(Console.ReadLine());
 }
 
 
-
     
-Задача 23
-Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.    
+// ﻿Задача 23
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.    
 
+Console.Clear();
 Console.Write("Введите значение X: ");
 int X = int.Parse(Console.ReadLine());
 
 for(int i=1; i<=X; i++)
 {
 //   Console.WriteLine($" {i*i*i}");
-     Console.WriteLine();
-     Console.WriteLine("{0}\t{1}\t{2}\t{3}",i, "куб" + (i), "=", i*i*i);
+    //  Console.WriteLine();
+Console.WriteLine("{0}\t{1}\t{2}\t{3}",i, "куб числа " + (i), "=", i*i*i);
 }
 
+// ﻿Задача 23 другое решение
 
-
-Console.Write("Введите число ");
-int N = Convert.ToInt32(Console.ReadLine());
 Console.Clear();
-
+Console.Write("Введите число ");
+int SpecifiedNumber = Convert.ToInt32(Console.ReadLine());
 int count = 1;
 
-while(count < N)
+while(count < SpecifiedNumber)
 {
 int num = Convert.ToInt32(Math.Pow(count, 3));
 Console.Write($"{num}, ");
 count++;
 }
-Console.Write($"{Math.Pow(N, 3)}");
+Console.Write($"{Math.Pow(SpecifiedNumber, 3)}");
+Console.WriteLine();  
     
 
-Найти сумму числе от одного до заданного
+
+
+
+// ﻿Задача 
+// Найти сумму числе от одного до заданного
     
-int summa(int number)
+Console.Clear();   
+int SumFrom_1_ToAGivenSpecifiedNumber(int SpecifiedNumber)
 {
-int sum = 0;
-for (int i = 1; i <= number; i++)
-{
-sum += i;
-}
+ int sum = 0;
+ for (int i = 1; i <= SpecifiedNumber; i++)
+ {
+ sum += i;
+ }
 
 return sum;
 }
 
 Console.Write("Введите число: ");
 
-int number = Convert.ToInt32(Console.ReadLine());
+int SpecifiedNumber = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine(summa(number));
+Console.WriteLine(SumFrom_1_ToAGivenSpecifiedNumber(SpecifiedNumber));
 
-
-
-
+// ﻿Задача другое решение
 
 void GetSumNums(int number)
 {
@@ -154,17 +149,6 @@ sum += i;
 Console.WriteLine($"Cумма цифр от 1 до {Math.Abs(number)}: {sum}");
 }
 
-Console.Clear();
-
-// GetSumNums(-5);
-// GetSumNums(58);
-// GetSumNums(25);
-// GetSumNums(16);
-
-Console.WriteLine("Введите число A");
-int n = Convert.ToInt32(Console.ReadLine());
-GetSumNums(n);
-
 Console.WriteLine("Введите число A");
 GetSumNums(Convert.ToInt32(Console.ReadLine()));
 
@@ -172,7 +156,7 @@ GetSumNums(Convert.ToInt32(Console.ReadLine()));
 
 
 
-
+//////////////////////
 Console.Clear();
 Console.Write("Введите число: ");
 int num = int.Parse(Console.ReadLine());
@@ -527,3 +511,204 @@ if (finded == true)
     Console.Write("Искомое число существует");
 else
     Console.Write("Искомое число не существует");
+                  
+                  
+     
+                  
+ // Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+// 3, 5 -> 243 (3⁵)
+// 2, 4 -> 16
+
+int value = 2;
+for (int power = 0; power <= 4; power++)
+   Console.WriteLine($"{value} в степени {power} = {(long)Math.Pow(value, power)} ");
+                  
+                  
+                  
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+// 452 -> 11
+// 82 -> 10
+// 9012 -> 12
+
+Console.Clear();
+Console.Write("Введите число: ");
+int num = int.Parse(Console.ReadLine());
+Console.WriteLine($"Сумма цифр = {GetMultiply(num)}");
+
+
+int GetMultiply(int number)
+{
+int result = 0;
+for (int i = 1; i <= number; i++)
+{
+result += i;
+}
+return result;
+}
+                  
+                  
+                  
+                  
+                  
+/ Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+// 6, 1, 33 -> [6, 1, 33]
+
+
+int[] array = GetBinaryArray(8);
+Console.WriteLine($" [ {String.Join(" | ", array)} ] ");
+
+
+int[] GetBinaryArray(int size)
+{
+int[] result = new int[size];
+for (int i = 0; i < size; i++)
+{
+result[i] = new Random().Next(16);
+}
+
+return result;
+}
+
+
+
+
+int[] array = {11,27,38,4,45,611,76,8,};
+
+Console.WriteLine($" {array[0]} {array[1]} {array[2]} {array[3]} {array[4]} {array[5]} {array[6]} {array[7]}");
+// Console.WriteLine($" {array[0]}, {array[1]}, {array[2]}, {array[3]}, {array[4]}, {array[5]}, {array[6]}, {array[7]} -> [{array[0]} {array[1]} {array[2]} {array[3]} {array[4]} {array[5]} {array[6]} {array[7]}]");
+
+
+                  
+                  
+                  
+// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
+// Напишите программу, которая покажет количество чётных чисел в массиве.
+// [345, 897, 568, 234] -> 2
+
+Console.Clear();
+Console.WriteLine("Введите размер массива");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] numbers = new int[size];
+FillArrayRandomNumbers(numbers);
+Console.WriteLine("Вот наш массив: ");
+PrintArray(numbers);
+int count = 0;
+
+for (int z = 0; z < numbers.Length; z++)
+if (numbers[z] % 2 == 0)
+count++;
+
+Console.WriteLine($"всего {numbers.Length} чисел, {count} из них чётные");
+
+void FillArrayRandomNumbers(int[] numbers)
+{
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        numbers[i] = new Random().Next(100,1000);
+    }
+}
+void PrintArray(int[] numbers)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        Console.Write(numbers[i] + " ");
+    }
+    Console.Write("]");
+    Console.WriteLine();
+}
+                  
+                  
+                  
+                  
+ // Задача 36: Задайте одномерный массив, заполненный случайными числами. 
+// Найдите сумму элементов, стоящих на нечётных позициях.
+// [3, 7, 23, 12] -> 19
+// [-4, -6, 89, 6] -> 0
+
+
+Console.Clear();
+Console.WriteLine("Введите размер массива");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] numbers = new int[size];
+FillArrayRandomNumbers(numbers);
+Console.WriteLine("Вот наш массив: ");
+PrintArray(numbers);
+int sum = 0;
+
+for (int z = 0; z < numbers.Length; z+=2)
+    sum = sum + numbers[z];
+
+    Console.WriteLine($"всего {numbers.Length} чисел, сумма элементов на нечётных позициях = {sum}");
+
+void FillArrayRandomNumbers(int[] numbers)
+{
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i] = new Random().Next(1,10);
+        }
+}
+void PrintArray(int[] numbers)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+    Console.Write("]");
+    Console.WriteLine();
+}
+
+                  
+                  
+                  
+                  
+ // Задача 38: Задайте массив вещественных чисел. 
+// Найдите разницу между максимальным и минимальным элементов массива.
+// [3 7 22 2 78] -> 76
+
+                  
+                  
+Console.Clear();
+Console.WriteLine("Введите размер массива");
+int size = Convert.ToInt32(Console.ReadLine());
+double[] numbers = new double[size];
+FillArrayRandomNumbers(numbers);
+Console.WriteLine("Вот наш массив: ");
+PrintArray(numbers);
+double min = Int32.MaxValue;
+double max = Int32.MinValue;
+
+for (int z = 0; z < numbers.Length; z++)
+{
+    if (numbers[z] > max)
+        {
+            max = numbers[z];
+        }
+    if (numbers[z] < min)
+        {
+            min = numbers[z];
+        }
+}
+
+Console.WriteLine($"всего {numbers.Length} чисел. Максимальное значение = {max}, минимальное значение = {min}");
+Console.WriteLine($"Разница между максимальным и минимальным значением = {max - min}");
+
+void FillArrayRandomNumbers(double[] numbers)
+{
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i] = Convert.ToDouble(new Random().Next(100,1000)) / 100;
+        }
+}
+void PrintArray(double[] numbers)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+    Console.Write("]");
+    Console.WriteLine();
+}
