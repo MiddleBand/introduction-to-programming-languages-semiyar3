@@ -155,17 +155,17 @@ GetSumNums(Convert.ToInt32(Console.ReadLine()));
 
 
 
+// ﻿Задача 
+// Найти сумму цифр из которых состоит число
 
-//////////////////////
 Console.Clear();
 Console.Write("Введите число: ");
 int num = int.Parse(Console.ReadLine());
 
-int c = GetCountNums(num);
-Console.WriteLine($"Количество цифр = {c}");
+int NumbersQuantity = GetCountNums(num);
+Console.WriteLine($"Количество цифр = {NumbersQuantity}");
 
-Console.WriteLine($"Количество цифр = {GetCountNums(16)}");
-
+// Console.WriteLine($"Количество цифр = {GetCountNums(168)}");
 
 int GetCountNums(int number)
 {
@@ -180,49 +180,36 @@ return count;
 
 
 
-Console.Clear();
+
+//Напишите программу, которая принимает
+//на вход число N и выдаёт произведение чисел от 1 до N.
+
+Console.Clear();   
+int GetMultiply(int SpecifiedNumber)
+{
+ int multiply = 1;
+ for (int i = 1; i <= SpecifiedNumber; i++)
+ {
+ multiply *= i;
+ }
+
+return multiply;
+}
+
 Console.Write("Введите число: ");
-int num = int.Parse(Console.ReadLine());
-Console.WriteLine($"Произведение цифр = {GetMultiply(num)}");
+
+int SpecifiedNumber = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(GetMultiply(SpecifiedNumber));
 
 
-int GetMultiply(int number)
-{
-int result = 1;
-for (int i = 2; i <= number; i++)
-{
-result *= i;
-}
-return result;
-}
-
-
-
-/ //Напишите программу, которая принимает
-// //на вход число N и выдаёт произведение чисел от 1 до N.
-
-Console.Clear();
-Console.Write("Введите число: ");
-int num = int.Parse(Console.ReadLine());
-Console.WriteLine($"Произведение цифр = {GetMultiply(num)}");
-
-
-int GetMultiply(int number)
-{
-int result = 1;
-for (int i = 2; i <= number; i++)
-{
-result *= i;
-}
-return result;
-}
 
 
 // Напишите программу, которая выводит массив из 8 элементов,
 // заполненный нулями и единицами в случайном порядке.
 
 int[] array = GetBinaryArray(8);
-Console.WriteLine($" [ {String.Join(" // ", array)} ] ");
+Console.WriteLine($" [ {String.Join(" , ", array)} ] ");
 
 
 int[] GetBinaryArray(int size)
@@ -238,55 +225,8 @@ return result;
 
 
 
-int[] CreateRandomArray(int N, int start, int end)
-{
-int[] RandomArray = new int[N];
-for (int i = 0; i < N; i++)
-{
-RandomArray[i] = new Random().Next(start, end + 1);
-}
-return RandomArray;
-}
-
-
-
-
-
-int[] CreateArray()
-{
-Console.WriteLine("Введите количество элементов массива");
-int size = Convert.ToInt32(Console.ReadLine());
-int[] array = new int[size];
-for (int i = 0; i < size; i++)
-{
-Console.WriteLine($"Введите {i+1} элемент массива");
-array[i] = Convert.ToInt32(Console.ReadLine());
-}
-return array;
-}
-
-
-
-
-int[] CreateArray()
-{
-Console.WriteLine("Введите количество элементов массива");
-int size = Convert.ToInt32(Console.ReadLine());
-int[] array = new int[size];
-for (int i = 0; i < size; i++)
-{
-Console.WriteLine($"Введите {i+1} элемент массива");
-array[i] = Convert.ToInt32(Console.ReadLine());
-}
-return array;
-}
-
-
-
-
-
-
-// // Создание и вывод массива
+// Создание и вывод массива 
+// БОЛЬШОЙ ОБСОЛЮТНО ЛОГИЧЕСКИ МНЕ НЕПОНЯТНЫЙ КОД ИЗ МАССИВОВ С СЫЛКАМИ И ЦИКЛАМИ
 
 int[] CreateRandomArray(int N, int start, int end)
 {
@@ -298,7 +238,6 @@ RandomArray[i] = new Random().Next(start, end + 1);
 return RandomArray;
 }
 
-
 int[] CreateArray()
 {
 Console.WriteLine("Введите количество элементов массива");
@@ -311,8 +250,6 @@ array[i] = Convert.ToInt32(Console.ReadLine());
 }
 return array;
 }
-
-
 
 void ShowArray(int[] array)
 {
@@ -322,8 +259,6 @@ Console.Write(array[i] + " ");
 }
 Console.WriteLine();
 }
-
-
 
 Console.Clear();
 
@@ -339,9 +274,6 @@ ShowArray(myRandomArray);
 Console.WriteLine("-------");
 int[] myArray = CreateArray();
 ShowArray(myArray);
-
-
-
 
 int [] Array = CreateRandomArray(12, -9, 9);
 ShowArray(Array);
@@ -373,7 +305,7 @@ return array;
 
 
 
-
+///////////////////////
 //Задайте массив. Напишите программу, которая определяет,
 // присутствует ли заданное число в массиве.
 
