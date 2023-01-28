@@ -644,3 +644,244 @@ void PrintArray(double[] numbers)
     Console.Write("]");
     Console.WriteLine();
 }
+
+
+
+
+// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+// 0, 7, 8, -2, -2 -> 2
+// 1, -7, 567, 89, 223-> 3
+
+Console.Clear();
+Console.WriteLine("Введите размер массива");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] numbers = new int[size];
+FillArrayNumbers(numbers);
+Console.WriteLine("Вот наш массив: ");
+PrintArray(numbers);
+int count = 0;
+
+for (int z = 0; z < numbers.Length; z++)
+if (numbers[z] > 0)
+count++;
+
+Console.WriteLine($"всего {numbers.Length} чисел, {count} из них больше 0");
+
+void FillArrayNumbers(int[] numbers)
+{
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        Console.WriteLine($"Введите {i+1} элемент массива");
+        numbers[i] = Convert.ToInt32(Console.ReadLine());
+    }
+}
+void PrintArray(int[] numbers)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        Console.Write(numbers[i] + " ");
+    }
+    Console.Write("]");
+    Console.WriteLine();
+}
+
+
+
+
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
+// заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+
+
+Console.Clear();
+Console.Write("Введите k1: ");
+var k1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите b1: ");
+var b1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите k2: ");
+var k2 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите b2: ");
+var b2 = Convert.ToDouble(Console.ReadLine());
+ 
+ 
+var x = -(b1 - b2) / (k1 - k2);
+var y = k1 * x + b1;
+ 
+x = Math.Round(x, 3);
+y = Math.Round(y, 3);
+ 
+Console.WriteLine($"Пересечение в точке: ({x};{y})");
+
+
+
+
+Console.Clear();
+
+string [,] table = new string [2,5];
+table [1,2] = "слово";
+for(int rows = 0; rows < 2; rows++)
+{
+    for(int columns = 0; columns < 5; columns++)
+    {
+        Console.WriteLine ($"-{table [rows, columns]}-");
+    }
+}
+
+
+
+Console.Clear();
+
+void PrintArray(int[,] matr)
+{
+// for(int i = 0; i < 3; i++)
+ for(int i = 0; i < matr.GetLength(0); i++)
+ {
+    // for(int j = 0; j < 4; j++)
+    for(int j = 0; j < matr.GetLength(1); j++)
+    {
+    Console.Write($"{matr [i,j]} ");
+    }
+    Console.WriteLine();
+ }
+}
+
+void FillArray(int[,] matr)
+{
+    for(int i = 0; i < matr.GetLength(0); i++)
+ {
+    // for(int j = 0; j < 4; j++)
+    for(int j = 0; j < matr.GetLength(1); j++)
+    {
+        matr[i,j] = new Random().Next(1,10);
+    }
+ }  
+}
+
+int[,] matrix = new int[3,4];
+
+PrintArray(matrix);
+Console.WriteLine();
+FillArray(matrix);
+PrintArray(matrix);
+
+
+
+Console.Clear();
+
+int[,] pic = new int[,] {
+ {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 
+ {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 
+ {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 
+ {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 
+ {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 
+ {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 
+ {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 
+ {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 
+ {0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 
+ {0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0 }, 
+ {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 }, 
+ {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 }, 
+ {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0 }, 
+ {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 }, 
+ {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0 }, 
+ {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0 }, 
+ {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 }, 
+ {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 }, 
+ {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0 }, 
+ {0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0 }, 
+ {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0 }, 
+ {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0 }, 
+ {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 
+};
+
+void PrintImage(int[,] image) 
+{ for (int i = 0; i < image.GetLength(0); i++) 
+  { 
+    for (int j = 0; j < image.GetLength(1); j++) 
+    { 
+        if(image[i,j] == 0) Console.Write($" "); 
+        else Console.Write($"+"); 
+    } 
+    Console.WriteLine(); 
+  } 
+} 
+void FillImage(int row, int col) 
+{ 
+    if (pic[row, col] == 0) 
+    { 
+        pic[row, col] = 1; 
+        FillImage(row - 1, col); 
+        FillImage(row, col - 1); 
+        FillImage(row + 1, col); 
+        FillImage(row, col + 1); 
+    } 
+} 
+PrintImage(pic); 
+FillImage(13, 13); 
+PrintImage(pic);
+
+
+
+
+Console.Clear();
+
+int Factorial(int n) 
+{ 
+    // 1! = 1 
+    // 0! = 1 
+    if(n == 1) return 1; 
+    else return n * Factorial(n-1); 
+} 
+Console.WriteLine(Factorial(3)); // 1 * 2 * 3 = 6
+
+
+
+
+Console.Clear();
+
+double Factorial(int n) 
+{ 
+    // 1! = 1 
+    // 0! = 1 
+    if(n == 1) return 1; 
+    else return n * Factorial(n-1); 
+} 
+for (int i = 1; i < 40; i++) 
+{ 
+    Console.WriteLine($"{i}! = {Factorial(i)}");
+}
+
+
+
+
+Console.Clear();
+
+int Fibonacci(int n) 
+{ 
+    if(n == 1 || n == 2) return 1; 
+    else return Fibonacci(n-1) + Fibonacci(n-2); 
+} 
+for (int i = 1; i < 10; i++)
+{ 
+    Console.WriteLine(Fibonacci(i)); 
+}
+
+
+
+Console.Clear();
+
+double Fibonacci(int n) 
+{ 
+    if(n == 1 || n == 2) return 1; 
+    else return Fibonacci(n-1) + Fibonacci(n-2); 
+}  
+
+for (int i = 1; i < 50; i++) 
+{ 
+    Console.WriteLine($"f({i}) = {Fibonacci(i)}");
+}
+
+
+
